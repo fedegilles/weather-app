@@ -1,0 +1,66 @@
+/* Everything you need to knmow about this app */
+/* Owner: Federico Gilles
+Production: 07/2019
+================================
+Fonts:
+
+font-family: 'Roboto', sans-serif;
+light: 300
+Regular: 400
+Bold: 700
+Black: 900
+*/
+
+/* CSS variables */
+
+:root {
+  --font-roboto: 'Roboto', Helvetica, sans-serif;
+}
+
+/* CSS styles */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(rgb(47,150,163), rgb(48,62,143));
+  font-family: var(--font-roboto);
+  font-size: 2em;
+  font-weight: 400;
+  color: #fff;
+}
+
+.location, .temperature {
+  height: 30vh;
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.temperature {
+  flex-direction: column;
+}
+
+.degree-section {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.degree-section span {
+  margin: 10px;
+  font-size: 30px;
+}
+
+.degree-section h2 {
+  font-size: 40px;
+}
