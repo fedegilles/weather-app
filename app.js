@@ -3,7 +3,13 @@ window.addEventListener("load", ()=> {
   let lat;
 
   if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(position => {console.log(position)
-    })
+    navigator.geolocation.getCurrentPosition(position => {
+      long = position.coords.longitud;
+      lat = position.coords.latitude;
+
+      const api = 'https://api.darksky.net/forecast/173c9f0771391a0a4426c698929008af/$(lat),$(long)';
+    });
+
+    fetch()
   }
 });
