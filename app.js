@@ -26,11 +26,28 @@ $(document).ready(function () {
             $('.temp').html(Math.floor(farenheit));
             $('.temp-type').html('°F');
           }
-           
+
           else {
             $('.temp').html(Math.floor(celsius));
             $('.temp-type').html('°C');
           }
+
+          //SETTING UP THE ICON
+            var icons = new Skycons({ "color": "white"
+          });
+
+          icons.set("Clear", Skycons.CLEAR_DAY);
+          icons.set("Clear-night", Skycons.CLEAR_NIGHT);
+          icons.set("Partly-cloudy-day", Skycons.PARTLY_CLOUDY_DAY);
+          icons.set("Partly-cloudy-night", Skycons.PARTLY_CLOUDY_NIGHT);
+          icons.set("Clouds", Skycons.CLOUDY);
+          icons.set("Rain", Skycons.RAIN);
+          icons.set("Sleet", Skycons.SLEET);
+          icons.set("Snow", Skycons.SNOW);
+          icons.set("Wind", Skycons.WIND);
+          icons.set("Fog", Skycons.FOG);
+          icons.play();
+
         });
       });
     });
