@@ -17,10 +17,22 @@ $(document).ready(function () {
 
         var location = res.name;
 
-        $()
-
-      })
-
-    })
+        $('.weather-location').html(location);
+        $('.temp').html(Math.floor(celsius));
+        $('.weather-description').html(res.weather[0].description);
+        $('.weatherType').attr('id', res.weather[0].main);
+        $('.row2').on('click', function () {
+          if ($('.temp').html() == (Math.floor(celsius))) {
+            $('.temp').html(Math.floor(farenheit));
+            $('.temp-type').html('°F');
+          }
+           
+          else {
+            $('.temp').html(Math.floor(celsius));
+            $('.temp-type').html('°C');
+          }
+        });
+      });
+    });
   }
-})
+});
