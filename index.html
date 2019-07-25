@@ -17,19 +17,19 @@
   </head>
   <body>
 
-    <div class="location">
-      <h1 class="location-timezone">Timezone</h1>
-      <p>Icon</p>
-    </div>
-
-    <div class="temperature">
-      <div class="degree-section">
-        <h2 class="temperature-degree">32</h2>
-        <span>F</span>
-      </div>
-      <div class="temperature-description">
-        It's hot in here
-      </div>
+    <div class="container">
+        <div class="weather-box">
+            <div class="row1">
+                <h2 class="weather-location"></h2>
+                <canvas class="weatherType" id="icon1" width="128" height="128"></canvas>
+            </div>
+            <div class="row2">
+                <h1 class="temp"></h1>
+                <span class="temp-type">°C</span>
+            </div>
+            <h2 class="weather-description"></h2>
+            <p class="made-by">Made by Simo Edwin with FFC WEATHER API.</p>
+        </div>
     </div>
 
     <script src="skycons.js"></script>
