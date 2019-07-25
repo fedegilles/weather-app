@@ -17,8 +17,8 @@ $(document).ready(function () {
 
         var location = res.name;
 
-
         
+
       })
 
     })
