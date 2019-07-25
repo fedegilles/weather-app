@@ -1,15 +1,26 @@
-window.addEventListener("load", ()=> {
-  let long;
-  let lat;
+$(document).ready(function () {
+  var lat;
+  var long;
 
   if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(position => {
-      long = position.coords.longitud;
+    navigator.geolocation.getCurrentPosition(function (position) {
+
       lat = position.coords.latitude;
+      long = position.coords.longitude;
 
-      const api = 'https://api.darksky.net/forecast/173c9f0771391a0a4426c698929008af/$(lat),$(long)';
-    });
+      var api = 'https://fcc-weather-api.glitch.me/api/current?lat=' + lat + '&lon=' + long + '';
 
-    fetch()
+      $.getJSON(api, function (res) {
+
+        var celsius = res.main.temp;
+        var farenheit = (celsius * 1.8) + 32;
+
+        var location = res.name;
+
+
+        
+      })
+
+    })
   }
-});
+})
